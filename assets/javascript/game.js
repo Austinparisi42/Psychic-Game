@@ -13,11 +13,19 @@ var losses = 0;
 var counter = 9;
 
 
-var guesses= [];
+var guesses = [];
 
 
     
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+
+function resetGame() {
+                losses++;
+                computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log('right');
+                counter = 9;
+                guesses = [];
+            }
 
 
 document.onkeyup = function(event) {
@@ -40,6 +48,9 @@ document.onkeyup = function(event) {
         
     else if(userChoice === computerChoice) {
         wins++;
+
+        computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+        console.log('right');
         
         console.log('wins');
 
@@ -50,6 +61,13 @@ document.onkeyup = function(event) {
     
     
     }
+
+    if(counter === 0) {
+        resetGame();
+            
+            
+            }
+    
     
     var html =
         "<h1>Psychic Game</h1>" +
@@ -64,8 +82,5 @@ document.onkeyup = function(event) {
         
 
 
-        if(counter === 0) {
-                window.location.reload(true);
-            }
-    
+
 };

@@ -20,7 +20,6 @@ var guesses= [];
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 
-
 document.onkeyup = function(event) {
    
     
@@ -52,12 +51,14 @@ document.onkeyup = function(event) {
         "<h2>Can you guess the letter I'm thinking of?</h2>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + guessLeft + "</p>" + 
-        "<p>Your Guesses so far: " + guessSoFar + "</p>";
+        "<p>Guesses Left: " + "guessLeft" + "</p>" + 
+        "<p>Your Guesses so far: " + "guessSoFar" + "</p>";
                 
        
         document.getElementById("game").innerHTML = html;
         
+
+
         if(counter === 0) {
                 window.location.reload(true);
             }

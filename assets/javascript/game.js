@@ -20,12 +20,12 @@ var guesses = [];
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 
 function resetGame() {
-                losses++;
-                computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-        console.log('Game has been reset');
-                counter = 9;
-                guesses = [];
-            }
+    losses++;
+    computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+    console.log('Game has been reset');
+    counter = 9;
+    guesses = [];
+}
 
 
 document.onkeyup = function(event) {

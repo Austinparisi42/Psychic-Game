@@ -32,15 +32,20 @@ document.onkeyup = function(event) {
         counter--;
         console.log('losses');
         guesses.push(userChoice);
+
+        
     }      
+
     
         
     else if(userChoice === computerChoice) {
         wins++;
-        computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+        
         console.log('wins');
+
+        guesses = [];
        
-        guesses = []; 
+         
         
     
     
@@ -51,8 +56,8 @@ document.onkeyup = function(event) {
         "<h2>Can you guess the letter I'm thinking of?</h2>" +
         "<p>Wins: " + wins + "</p>" +
         "<p>Losses: " + losses + "</p>" +
-        "<p>Guesses Left: " + "guessLeft" + "</p>" + 
-        "<p>Your Guesses so far: " + "guessSoFar" + "</p>";
+        "<p>Guesses Left: " + counter + "</p>" + 
+        "<p>Your Guesses so far: " + guesses + "</p>";
                 
        
         document.getElementById("game").innerHTML = html;
